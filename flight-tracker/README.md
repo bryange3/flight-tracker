@@ -1,10 +1,9 @@
 # Flight Tracker
-DESCRIPTION: Mean Green Airlines Program. A console-based flight tracker for scheduling pilots, crew members, and flights. Project implemented in C++ for CSCE 1040 Computer Science II course at the University of North Texas as a part of the Texas Academy of Mathematics and Science high school program.
+DESCRIPTION: Mean Green Airlines Program. A console-based flight tracker for scheduling pilots, crew members, and flights. Project implemented in C++ for CSCE 1040 Computer Science II course at the University of North Texas as a part of the Texas Academy of Mathematics and Science high school program. This is the final version of my flight tracker program (HW5) out of 3 homework assignments (HW3, HW4, HW5).
 
 AUTHOR: Bryan Ge
 
 EMAIL: bryange@my.unt.edu
-CURRENT EMAIL: bryange3@gmail.com
 
 COURSE: CSCE 1040 Computer Science II
 
@@ -269,3 +268,10 @@ public:
 - boolean function which returns true if a flight is completed or cancelled
 - boolean function which checks if a flight is over 8 hours
 - print info function
+
+## Post-Mortem Report
+In total, this program took me over 48 hours to write. The creation of these derived classes Pilot, CoPilot, and Cabin taught me how to use the topic of inheritance within my code. Some obstacles that I faced when changing my code to incorporate the new subclasses included identifying the object class types as well as creating the crew member objects using their respective subclasses in relation to the map.
+
+I overcame the obstacle of identifying the type of crew member by using the typeid function and comparing the object to a dummy of the subclasses. This would be used to make sure that the user is presented with the correct fields to complete in terms of adding a crew member, since pilots, copilots, and cabin members all have slightly different data members. By identifying what type of crew member is being added or edited, the program will be able to decide which menus or prompts to print to the user.
+
+I was able to implement the setting and getting of the different data members of the respective subclasses by casting the CrewMember object. This made printing information on each kind of crew member as well as editing very simple and intuitive. Overall, this homework certainly required some changes in my code but the program remained mostly the same.
